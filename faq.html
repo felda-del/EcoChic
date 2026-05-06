@@ -1,44 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initital-scale=1.0">
-    <title>EcoChic | FAQ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChic | Style Quiz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Our Frequently Asked Questions:</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="tips.html">Tips & Tricks</a></li>
-                <li><a href="progress.html">Progress</a></li>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">ecochic.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
             </ul>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
     </header>
+
     <main>
-        <h2>What is EcoChic?</h2>
-        <p>EcoChic is a website dedicated to helping those who want to live more eco-friendly.</p>
+        <section class="page-hero">
+            <div class="section-content page-hero-layout">
+                <div data-reveal>
+                    <p class="mini-label">Interactive Tool</p>
+                    <h1 class="page-title">Find Your Sustainable Style Approach</h1>
+                    <p class="page-copy">
+                        Answer a few short questions and EcoChic will suggest the most realistic
+                        sustainable fashion approach for your budget, habits, and goals.
+                    </p>
+                </div>
+                <img src="images/image3.jpg" alt="People reflecting on nature" class="page-hero-image" data-reveal>
+            </div>
+        </section>
 
-        <h2>How am I able to get involved?</h2>
-        <p>You can sign up with us and start your eco-friendly journey whenever, with tips and tricks, resources, and
-            many other opportunities.</p>
-        <div class="image-container">
-            <img src="images/image3.jpg" alt="image3" width="500" height="300">
-        </div>
+        <section class="feature-section">
+            <div class="section-content quiz-layout">
+                <form id="style-quiz-form" class="quiz-card" data-reveal>
+                    <label class="field-label" for="shoppingGoal">What are you trying to improve most?</label>
+                    <select id="shoppingGoal" name="shoppingGoal" class="form-input">
+                        <option value="replace-less">Buying less often</option>
+                        <option value="refresh">Refreshing my wardrobe on a budget</option>
+                        <option value="quality">Investing in better long-term pieces</option>
+                    </select>
+
+                    <label class="field-label" for="budget">How would you describe your budget?</label>
+                    <select id="budget" name="budget" class="form-input">
+                        <option value="tight">Tight budget</option>
+                        <option value="balanced">Moderate budget</option>
+                        <option value="flexible">Flexible budget</option>
+                    </select>
+
+                    <label class="field-label" for="priority">What matters most to you?</label>
+                    <select id="priority" name="priority" class="form-input">
+                        <option value="waste">Reducing waste</option>
+                        <option value="style">Keeping my style polished</option>
+                        <option value="value">Getting better long-term value</option>
+                    </select>
+
+                    <label class="field-label" for="careHabit">How do you currently care for clothes?</label>
+                    <select id="careHabit" name="careHabit" class="form-input">
+                        <option value="careful">I try to repair and wash gently</option>
+                        <option value="average">I do some care, but not consistently</option>
+                        <option value="minimal">I rarely think about garment care</option>
+                    </select>
+
+                    <button type="submit" class="submit-button">Get Recommendation</button>
+                </form>
+
+                <div class="quiz-result-card" id="quiz-result" data-reveal>
+                    <p class="mini-label">Your EcoChic recommendation</p>
+                    <h2 id="quiz-result-title">Ready when you are</h2>
+                    <p id="quiz-result-text">Submit the quiz to see which sustainable style strategy fits you best.</p>
+                    <ul id="quiz-result-list" class="quiz-result-list"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section faq-strip">
+            <div class="section-content" data-reveal>
+                <h2 class="section-title">Quick FAQ</h2>
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>What makes a fashion choice more sustainable?</summary>
+                        <p>Usually it is a mix of buying less often, choosing better materials, rewearing items longer, and caring for garments well.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does sustainable always mean expensive?</summary>
+                        <p>No. Some of the strongest habits are low-cost, such as buying second-hand, repairing clothes, and avoiding impulse purchases.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Why does EcoChic focus on realistic habits?</summary>
+                        <p>Because repeated small decisions are easier to keep and often matter more than one perfect purchase.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
+                </div>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
+                </div>
+            </div>
+
+            <div class="image-creds">
+                <p>&copy; Image Credits</p>
+                <cite class="citations">
+                    <a href="https://www.premiumtimesng.com/opinion/611394-we-worship-rather-than-conquer-nature-by-sunday-adelaja.html" target="_blank">Worship not conquer nature</a>
+                </cite>
+            </div>
+        </footer>
     </main>
-    <footer>
-        <h6>&copy; Image Credits: <cite><a
-                    href="https://www.premiumtimesng.com/opinion/611394-we-worship-rather-than-conquer-nature-by-sunday-adelaja.html"
-                    target="_blank">Worship not conquer nature</a></cite></h6>
-    </footer>
-</body>
 
+    <script src="javas/script.js"></script>
+</body>
 </html>

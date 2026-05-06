@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initital-scale=1.0">
-    <title>EcoChic | Articles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChic | Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Articles:</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="tips.html">Tips & Tricks</a></li>
-                <li><a href="progress.html">Progress</a></li>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">ecochic.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
             </ul>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
     </header>
-    <main>
-        <h2>Options:</h2>
-        <a href="https://news.climate.columbia.edu/2021/06/10/why-fashion-needs-to-be-more-sustainable/">Why Fashion
-            Needs to Be More Sustainable</a><br>
-        <a href="https://www.genevaenvironmentnetwork.org/resources/updates/sustainable-fashion/">Environmental
-            Sustainability in the Fashion Industry</a>
-    </main>
-</body>
 
+    <main>
+        <section class="page-hero">
+            <div class="section-content page-hero-layout">
+                <div data-reveal>
+                    <p class="mini-label">Learning Hub</p>
+                    <h1 class="page-title">EcoChic Resources</h1>
+                    <p class="page-copy">
+                        Search and sort a curated set of articles about sustainable fashion systems,
+                        personal shopping habits, and lower-impact materials.
+                    </p>
+                </div>
+                <img src="images/image5.jpg" alt="Reading and research concept" class="page-hero-image" data-reveal>
+            </div>
+        </section>
+
+        <section class="feature-section" id="resource-library">
+            <div class="section-content">
+                <div class="filter-toolbar" data-reveal>
+                    <input type="search" id="resource-search" class="form-input toolbar-input" placeholder="Search by topic, level, or keyword">
+                    <select id="resource-topic" class="form-input toolbar-input">
+                        <option value="all">All topics</option>
+                    </select>
+                    <select id="resource-sort" class="form-input toolbar-input">
+                        <option value="title-asc">Sort alphabetically</option>
+                        <option value="time-asc">Shortest read first</option>
+                    </select>
+                </div>
+
+                <div id="resource-grid" class="resource-grid" data-reveal></div>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
+                </div>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="javas/script.js"></script>
+</body>
 </html>

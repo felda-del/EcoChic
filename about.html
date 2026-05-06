@@ -3,153 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoChic | About Us</title>
+    <title>EcoChic | About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-   <!-- Header / Navbar -->
-   <header>
-      <nav class="navbar section-content">
-          <a href="index.html" class="nav-logo">
-              <h2 class="logo-text">ecochic.</h2>
-          </a>
-          <ul class="nav-menu">
-              <button id="menu-close-button" class="fas fa-times"></button>
-              <li class="nav-items">
-                  <a href="index.html" class="nav-link">Home</a>
-              </li>
-              <li class="nav-items">
-                  <a href="about.html" class="nav-link">About</a>
-              </li>
-              <li class="nav-items">
-                  <a href="contact.html" class="nav-link" id="contactbutton">Contact Us</a>
-              </li>
-          </ul>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">ecochic.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
+        </nav>
+    </header>
 
-          <button id="menu-open-button" class="fas fa-bars"></button>
-      </nav>
-   </header>
-
-   <main>
-      <!-- About section -->
-      <section class="about-section">
-         <div class="section-content">
-             <div class="about-image-wrapper">
-                 <img src="images/i2.jpeg" alt="About" class="about-image">
-             </div>
-             <div class="about-details">
-                 <h2 class="section-title">About Us</h2>
-                 <h3 class="section-subtitle">Who We Are</h3>
-                 <p class="text">
-                    At EcoChic, we believe that sustainability should be simple, 
-                    accessible, and even stylish. Our mission is to provide 
-                    individuals with the tools, knowledge, and inspiration to live 
-                    in a way that’s better for the planet—without making life complicated.
-                    We understand that sustainability can sometimes feel overwhelming. 
-                    With so much information out there, it’s easy to wonder where 
-                    to start or whether your actions even matter. That’s why EcoChic 
-                    exists: to break sustainability down into practical steps that 
-                    anyone can follow.
-                 </p>
-                 <div class="social-link-list">
-                     <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                     <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                     <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
-                 </div>
-             </div>
-         </div>
-      </section>
-
-        <!-- About extra section -->
-        <div class="mission-section">
+    <main>
+        <section class="about-section">
             <div class="section-content">
-                <div class="p1-details">
-                    <h3 class="section-subtitle">Our Mission: Making Sustainability a Lifestyle</h3>
+                <div class="about-image-wrapper" data-reveal>
+                    <img src="images/i2.jpeg" alt="People collaborating around a sustainability plan" class="about-image">
+                </div>
+                <div class="about-details" data-reveal>
+                    <h2 class="section-title">About Us</h2>
+                    <h3 class="section-subtitle">Why EcoChic Exists</h3>
                     <p class="text">
-                        We’re here to empower people to make environmentally responsible 
-                        choices in their daily lives. From fashion to food, energy to 
-                        transportation, we cover every aspect of sustainable living to 
-                        help you integrate eco-friendly habits into your routine.
-                        Our approach is built on three core principles:
-                        <ol class="p1-list">
-                            <li><strong>Education</strong> – We provide clear, well-researched resources 
-                                so you can understand how your lifestyle choices impact 
-                                the environment.</li>
-                            <li><strong>Action</strong> – We give you actionable steps to reduce waste, 
-                                conserve energy, and adopt more sustainable habits.</li>
-                            <li><strong>Community</strong> – We believe that real change happens when 
-                                people support and inspire each other, which is why 
-                                we foster a network of like-minded individuals who 
-                                want to make a difference.</li>
-                        </ol>
+                        EcoChic was created as a sustainability and fashion concept that makes lower-impact
+                        living easier to understand. Instead of only describing the problem, the project
+                        focuses on actions people can take right away.
+                    </p>
+                    <p class="text">
+                        The site combines guidance, self-assessment, product comparison, and progress tracking
+                        to show that sustainable fashion can be thoughtful, realistic, and accessible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="section-content">
+                <div class="p1-details" data-reveal>
+                    <h3 class="section-subtitle">Our Mission: Making Sustainability Practical</h3>
+                    <p class="text">
+                        EcoChic is designed around three ideas that are easy to explain in a portfolio or interview:
+                    </p>
+                    <ol class="p1-list">
+                        <li><strong>Education</strong> - Explain sustainable fashion in clear, concrete language.</li>
+                        <li><strong>Action</strong> - Turn ideas into tools people can actually use.</li>
+                        <li><strong>Consistency</strong> - Encourage repeatable habits over one-time perfect choices.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section-content">
+                <div class="p2-details" data-reveal>
+                    <h3 class="section-subtitle">Design Philosophy</h3>
+                    <p class="text">
+                        The project stays intentionally simple: no extra frameworks, no heavy dependencies, and
+                        no complex back end. That keeps the code approachable while still demonstrating strong
+                        front-end structure, local storage, validation, filtering logic, and interactive features.
                     </p>
                 </div>
             </div>
 
             <div class="section-content">
-                <div class="p2-details">
-                    <h3 class="section-subtitle">Why EcoChic?</h3>
+                <div class="p3-details" data-reveal>
+                    <h3 class="section-subtitle">How the Experience Helps Users</h3>
                     <p class="text">
-                        We believe that sustainability shouldn’t mean sacrificing 
-                        convenience or personal style. Many people assume that living 
-                        an eco-friendly lifestyle means giving up their favorite 
-                        products, spending more money, or making drastic changes 
-                        overnight. But in reality, being sustainable is about making 
-                        smarter, more conscious choices—without compromising your way of life.
-                        At EcoChic, we make sustainability approachable and enjoyable. 
-                        Whether it’s learning how to choose ethical brands, discovering 
-                        energy-saving tips, or finding creative ways to reuse household 
-                        items, we bring practical solutions to your everyday life.
+                        Someone visiting EcoChic can compare lower-impact options, save favorites, get tailored
+                        style guidance, and measure their current habits. The result is a site that feels more
+                        like a practical sustainability companion than a static information page.
                     </p>
                 </div>
             </div>
 
-            <div class="section-content">
-                <div class="p3-details">
-                    <h3 class="section-subtitle">Join Us in Making a Difference</h3>
-                    <p class="text">
-                        Sustainability is a journey, not a destination. Whether you’re 
-                        taking your first step toward eco-friendly living or looking 
-                        for new ways to make an impact, EcoChic is here to support you. 
-                        Start small, stay committed, and inspire others to do the same.
-                    </p>
+            <h3 class="mission-ending" data-reveal">
+                Better fashion habits start with better information and smaller, repeatable choices.
+            </h3>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
+                </div>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
                 </div>
             </div>
 
-            <h3 class="mission-ending">Join the EcoChic movement today — 
-            because a greener world starts with YOU.</h3>
-        </div>
-
-    <footer class="footer-section">
-        <div class="section-content">
-            <p class="copyright-text">&copy 2025 ecochic</p>
-
-            <div class="social-link-list">
-                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            <div class="image-creds">
+                <p>&copy; Image Credits</p>
+                <cite class="citations">
+                    <a href="https://www.pexels.com/photo/a-group-of-people-discussing-beside-a-desktop-with-graph-on-screen-6476259/" target="_blank">Group discussion</a><br>
+                    <a href="https://www.cleanpng.com/png-earth-with-growing-plant-8308181/download-png.html" target="_blank">Growing earth</a><br>
+                    <a href="https://www.cleanpng.com/png-earth-surrounded-by-greenery-8321669/" target="_blank">Green earth</a>
+                </cite>
             </div>
+        </footer>
+    </main>
 
-            <p class="policy-text">
-                <a href="#" class="policy-link">Privacy policy</a>
-            </p>
-        </div>
-
-        <div class="image-creds">
-            <p>&copy Image Credits</p>
-            <cite class="citations">
-                <a href="https://www.pexels.com/photo/a-group-of-people-discussing-beside-a-desktop-with-graph-on-screen-6476259/" 
-                target="_blank">Group discussion</a><br>
-                <a href="https://www.cleanpng.com/png-earth-with-growing-plant-8308181/download-png.html" 
-                target="_blank">Growing earth</a><br>
-                <a href="https://www.cleanpng.com/png-earth-surrounded-by-greenery-8321669/"
-                target="_blank">Green earth</a>
-            </cite>
-        </div>
-    </footer>
-   </main>
-
-   <script src="javas/script.js"></script>
+    <script src="javas/script.js"></script>
 </body>
 </html>

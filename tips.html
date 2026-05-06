@@ -1,46 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initital-scale=1.0">
-    <title>EcoChic | Tips & Tricks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoChic | Product Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Tips & Tricks</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="tips.html">Tips & Tricks</a></li>
-                <li><a href="progress.html">Progress</a></li>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">ecochic.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
             </ul>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
     </header>
 
     <main>
-        <h2>Ideas</h2>
-        <h3>Reduce Waste</h3>
-        <h3>Save Energy</h3>
-        <h3>Conserve Water</h3>
-        <h3>Eco-Friendly Transportation</h3>
-        <h3>Sustainable Food Choices</h3>
-        <h3>Eco-Friendly Fashion</h3>
-        <div class="image-container">
-            <img src="images/image1.jpg" alt="image1" width="500" height="300">
-        </div>
-    </main>
-    <footer>
-        <h6>&copy; Image Credits: <cite><a
-                    href="https://www.premiumtimesng.com/opinion/611394-we-worship-rather-than-conquer-nature-by-sunday-adelaja.html"
-                    target="_blank">Worship not conquer nature</a></cite></h6>
-    </footer>
-</body>
+        <section class="page-hero">
+            <div class="section-content page-hero-layout">
+                <div data-reveal>
+                    <p class="mini-label">Feature Tool</p>
+                    <h1 class="page-title">Sustainable Product Explorer</h1>
+                    <p class="page-copy">
+                        Browse a small EcoChic product catalog, compare lower-impact categories,
+                        search by keywords, sort by score or price, and save your favorite picks locally.
+                    </p>
+                </div>
+                <img src="images/image1.jpg" alt="Eco-friendly lifestyle inspiration" class="page-hero-image" data-reveal>
+            </div>
+        </section>
 
+        <section class="feature-section" id="product-explorer">
+            <div class="section-content">
+                <div class="filter-toolbar" data-reveal>
+                    <input type="search" id="product-search" class="form-input toolbar-input" placeholder="Search by name, material, or category">
+                    <select id="product-category" class="form-input toolbar-input">
+                        <option value="all">All categories</option>
+                    </select>
+                    <select id="product-sort" class="form-input toolbar-input">
+                        <option value="score-desc">Sort by eco score</option>
+                        <option value="name-asc">Sort alphabetically</option>
+                        <option value="price-asc">Lowest price first</option>
+                        <option value="price-desc">Highest price first</option>
+                    </select>
+                    <label class="filter-toggle">
+                        <input type="checkbox" id="favorites-only">
+                        Show saved items only
+                    </label>
+                </div>
+
+                <div class="results-header" data-reveal>
+                    <h2 class="section-subtitle">Suggested Lower-Impact Picks</h2>
+                    <p id="product-results-count" class="results-count">0 items shown</p>
+                </div>
+
+                <div id="product-grid" class="product-grid" data-reveal></div>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
+                </div>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
+                </div>
+            </div>
+
+            <div class="image-creds">
+                <p>&copy; Image Credits</p>
+                <cite class="citations">
+                    <a href="https://www.premiumtimesng.com/opinion/611394-we-worship-rather-than-conquer-nature-by-sunday-adelaja.html" target="_blank">Worship not conquer nature</a>
+                </cite>
+            </div>
+        </footer>
+    </main>
+
+    <script src="javas/script.js"></script>
+</body>
 </html>

@@ -3,117 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoChic | Contact Us</title>
+    <title>EcoChic | Contact</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header / Navbar -->
     <header>
         <nav class="navbar section-content">
             <a href="index.html" class="nav-logo">
                 <h2 class="logo-text">ecochic.</h2>
             </a>
             <ul class="nav-menu">
-                <button id="menu-close-button" class="fas fa-times"></button>
-                <li class="nav-items">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-items">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-items">
-                    <a href="contact.html" class="nav-link" id="contactbutton">Contact Us</a>
-                </li>
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
             </ul>
-
-            <button id="menu-open-button" class="fas fa-bars"></button>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
     </header>
 
     <main>
-         <section class="contact-section">
-            <h2 class="section-title">Contact Us</h2>
-            <div id="success-message" class="hidden">
-                <p>Thank you! Your message has been received. We’ll get back to you soon!</p>
-            </div>
-            <div class="section-content">
-                <ul class="contact-info-list">
-                  <li class="contact-info">
-                     <i class="fa-solid fa-location-crosshairs"></i>
-                     <p>Toronto, Canada</p>
-                  </li>
-                  <li class="contact-info">
-                     <i class="fa-regular fa-envelope"></i>
-                     <p>info@ecochic.ca</p>
-                  </li>
-                  <li class="contact-info">
-                     <i class="fa-regular fa-clock"></i>
-                     <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                  </li>
-                  <li class="contact-info">
-                    <i class="fa-regular fa-clock"></i>
-                    <p>Saturday: 10:00 AM - 12:00 PM</p>
-                  </li>
-                  <li class="contact-info">
-                    <i class="fa-regular fa-clock"></i>
-                    <p>Sunday: Closed</p>
-                  </li>
-                </ul>
-                
-                <form action="" method="POST" class="contact-form" id="contact-form">
-                    <p id="name-error"></p>
-                    <input type="text" id="name" class="form-input" placeholder="Your Name *">
-                  
-                    <p id="email-error"></p>
-                    <input type="text" id="email" class="form-input" placeholder="Your Email *">
-                  
-                    <p id="number-error"></p>
-                    <input type="tel" id="number" class="form-input" placeholder="Your Phone Number">
-
-                    <select id="subject" name="subject" class="form-input">
-                        <option value="General Inquiry">General Inquiry</option>
-                        <option value="Collaboration">Collaboration</option>
-                        <option value="Feedback">Feedback</option>
-                        <option value="Technical Support">Technical Support</option>
-                    </select>
-                  
-                    <p id="message-error"></p>
-                    <textarea id="message" class="form-input" placeholder="Your Message *"></textarea>
-                  
-                    <div class="selects">
-                        <label><input type="checkbox" id="terms-checkbox">&#32 I agree to the terms and conditions</label>
+        <section class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            <p id="success-message" class="success-message" aria-live="polite"></p>
+            <div class="section-content contact-layout">
+                <form action="" method="POST" class="contact-form" id="contact-form" novalidate data-reveal>
+                    <div class="form-group">
+                        <label class="field-label" for="name">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your Name *" autocomplete="name" required>
+                        <p id="name-error" class="form-error" aria-live="polite"></p>
                     </div>
 
+                    <div class="form-group">
+                        <label class="field-label" for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your Email *" autocomplete="email" required>
+                        <p id="email-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="field-label" for="number">Phone Number</label>
+                        <input type="tel" id="number" class="form-input" placeholder="Your Phone Number" autocomplete="tel">
+                        <p id="number-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="field-label" for="subject">Reason for Contact</label>
+                        <select id="subject" name="subject" class="form-input">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Collaboration">Collaboration</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Technical Support">Technical Support</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="message-meta">
+                            <label class="field-label" for="message">Message</label>
+                            <span id="message-count" class="message-count">0/300 characters</span>
+                        </div>
+                        <textarea id="message" class="form-input" placeholder="Your Message *" maxlength="300" required></textarea>
+                        <p id="message-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="selects">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms-checkbox">
+                            I agree to the terms and conditions
+                        </label>
+                        <p id="terms-error" class="form-error" aria-live="polite"></p>
+                    </div>
+
+                    <p id="form-status" class="form-status" aria-live="polite"></p>
                     <button type="submit" class="submit-button">Submit</button>
                 </form>
             </div>
-         </section>
+        </section>
 
-         <footer class="footer-section">
-            <div class="section-content">
-                <p class="copyright-text">&copy 2025 ecochic</p>
-
-                <div class="social-link-list">
-                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
                 </div>
-
-                <p class="policy-text">
-                    <a href="#" class="policy-link">Privacy policy</a>
-                </p>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
+                </div>
             </div>
 
             <div class="image-creds">
-                <p>&copy Image Credits</p>
+                <p>&copy; Image Credits</p>
                 <cite class="citations">
-                    <a href="https://www.pexels.com/photo/a-group-of-people-discussing-beside-a-desktop-with-graph-on-screen-6476259/" 
-                    target="_blank">Group discussion</a><br>
-                    <a href="https://www.cleanpng.com/png-earth-with-growing-plant-8308181/download-png.html" 
-                    target="_blank">Growing earth</a><br>
-                    <a href="https://www.cleanpng.com/png-earth-surrounded-by-greenery-8321669/"
-                    target="_blank">Green earth</a>
+                    <a href="https://www.pexels.com/photo/a-group-of-people-discussing-beside-a-desktop-with-graph-on-screen-6476259/" target="_blank">Group discussion</a><br>
+                    <a href="https://www.cleanpng.com/png-earth-with-growing-plant-8308181/download-png.html" target="_blank">Growing earth</a><br>
+                    <a href="https://www.cleanpng.com/png-earth-surrounded-by-greenery-8321669/" target="_blank">Green earth</a>
                 </cite>
             </div>
         </footer>

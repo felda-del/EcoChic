@@ -1,40 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width=device-width, initital-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoChic | Progress</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <header>
-        <h1>Progress:</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="tips.html">Tips & Tricks</a></li>
-                <li><a href="progress.html">Progress</a></li>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">ecochic.</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times" aria-label="Close menu"></button>
+                <li class="nav-items"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-items"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-items"><a href="tips.html" class="nav-link">Explorer</a></li>
+                <li class="nav-items"><a href="articles.html" class="nav-link">Resources</a></li>
+                <li class="nav-items"><a href="faq.html" class="nav-link">Style Quiz</a></li>
+                <li class="nav-items"><a href="progress.html" class="nav-link">Progress</a></li>
+                <li class="nav-items"><a href="contact.html" class="nav-link" id="contactbutton">Contact</a></li>
             </ul>
+            <button id="menu-open-button" class="fas fa-bars" aria-label="Open menu"></button>
         </nav>
     </header>
-    <main>
-        <h2>Calendar:</h2>
-        <a href="https://calendar.google.com/calendar/u/0/r" style="display: block; margin-bottom: 10px;">Calendar</a>
-        <div class="image-container">
-            <img src="images/image4.webp" alt="image4" width="500" height="300">
-        </div>
-    </main>
-    <footer>
-        <h6>&copy; Image Credits: <cite><a
-                    href="https://www.zwende.com/products/eco-friendly-plantable-seed-paper-calendar-with-stand-2024"
-                    target="_blank">Eco-Friendly Calendar</a></cite></h6>
-    </footer>
-</body>
 
+    <main>
+        <section class="progress-section" id="progress-tracker">
+            <div class="section-content progress-layout">
+                <div class="progress-intro" data-reveal>
+                    <h2 class="section-title">Track Your Eco Progress</h2>
+                    <p class="progress-copy">
+                        Sustainable habits are easier to keep when you can see your progress.
+                        Use this weekly checklist to log practical actions you complete in your wardrobe routine.
+                    </p>
+
+                    <div class="progress-summary-card">
+                        <p class="progress-stat-label">Completed actions</p>
+                        <p class="progress-stat-value" id="completed-count">0/5</p>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                        </div>
+                        <p class="progress-feedback" id="completion-message">Start with one action today. Small wins still count.</p>
+                    </div>
+                </div>
+
+                <div class="progress-card" data-reveal>
+                    <h3 class="section-subtitle">This Week's Checklist</h3>
+                    <div class="progress-checklist">
+                        <label class="progress-item"><input type="checkbox" value="reusable-bottle"> Carried a reusable water bottle or coffee cup</label>
+                        <label class="progress-item"><input type="checkbox" value="low-waste-meal"> Planned a lower-waste or plant-forward meal</label>
+                        <label class="progress-item"><input type="checkbox" value="second-hand"> Reused, repaired, or bought second-hand instead of new</label>
+                        <label class="progress-item"><input type="checkbox" value="energy-saved"> Reduced home energy use by unplugging or switching off devices</label>
+                        <label class="progress-item"><input type="checkbox" value="community-action"> Shared one sustainability idea with a friend or family member</label>
+                    </div>
+
+                    <label class="field-label progress-notes-label" for="progress-notes">Reflection Notes</label>
+                    <textarea id="progress-notes" class="progress-notes" placeholder="What was easy this week? What was harder than expected?"></textarea>
+
+                    <div class="progress-actions">
+                        <button type="button" class="submit-button" id="reset-progress">Reset Tracker</button>
+                        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" class="calendar-link">Open your calendar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="section-content calculator-layout">
+                <div class="feature-copy" data-reveal>
+                    <h2 class="section-title">Wardrobe Sustainability Score</h2>
+                    <p class="progress-copy">
+                        This calculator estimates how sustainable your recent wardrobe habits look based on
+                        shopping volume, second-hand choices, repairs, and laundry care.
+                    </p>
+                </div>
+
+                <div class="calculator-card" data-reveal>
+                    <form id="impact-calculator-form" class="calculator-form">
+                        <label class="field-label" for="newItems">How many new clothing items did you buy this month?</label>
+                        <input id="newItems" name="newItems" type="number" min="0" max="20" value="2" class="form-input">
+
+                        <label class="field-label" for="secondHandItems">How many second-hand items did you choose?</label>
+                        <input id="secondHandItems" name="secondHandItems" type="number" min="0" max="20" value="1" class="form-input">
+
+                        <label class="field-label" for="laundryMode">How do you usually wash clothes?</label>
+                        <select id="laundryMode" name="laundryMode" class="form-input">
+                            <option value="cold">Mostly cold water</option>
+                            <option value="mixed">A mix of cold and warm</option>
+                            <option value="hot">Mostly warm or hot water</option>
+                        </select>
+
+                        <label class="field-label" for="repairs">How many items did you repair or tailor recently?</label>
+                        <input id="repairs" name="repairs" type="number" min="0" max="10" value="1" class="form-input">
+
+                        <button type="submit" class="submit-button">Calculate Score</button>
+                    </form>
+
+                    <div class="calculator-result" id="calculator-result">
+                        <p class="mini-label">Estimated score</p>
+                        <h3 id="calculator-score">0/100</h3>
+                        <p id="calculator-summary"></p>
+                        <ul id="calculator-advice" class="calculator-advice"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-section">
+            <div class="section-content footer-shell">
+                <div>
+                    <p class="copyright-text">&copy; 2025 ecochic</p>
+                    <p class="footer-note">EcoChic is a concept website focused on sustainable lifestyle and fashion education.</p>
+                </div>
+                <div class="footer-link-group">
+                    <a href="tips.html" class="footer-link">Product Explorer</a>
+                    <a href="faq.html" class="footer-link">Style Quiz</a>
+                    <a href="progress.html" class="footer-link">Progress Tools</a>
+                </div>
+            </div>
+
+            <div class="image-creds">
+                <p>&copy; Image Credits</p>
+                <cite class="citations">
+                    <a href="https://www.zwende.com/products/eco-friendly-plantable-seed-paper-calendar-with-stand-2024" target="_blank">Eco-friendly calendar</a>
+                </cite>
+            </div>
+        </footer>
+    </main>
+
+    <script src="javas/script.js"></script>
+</body>
 </html>
